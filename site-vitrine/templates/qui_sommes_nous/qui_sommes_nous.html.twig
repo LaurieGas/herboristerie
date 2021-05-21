@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}QuiSommesNous{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="assets/css/quiSommesNous.css">
+{% endblock %}
+
+{% block body %}
+<section class="qui-sommes-nous-body">
+    <h1 class="about-h1">Qui sommes nous ?</h1>
+    <div id="notre-histoire">
+        <h2 class="notre-histoire-h2">Notre histoire</h2>
+        <div class="histoire-bloc-paragraphe">
+            <p class="p-first">Installée au coeur du Pré-Saint-Gervais depuis 1978 l’Herboristerie du Pré est une entreprise familiale qui perpétue l'héritage traditionnel du soin par les plantes en alliance avec les techniques et les exigences avancées d'aujourd'hui.</p>
+            <p>Nous maintenons un engagement ferme dans la production artisanale de nos infusions et tisanes à visée médicinale. Nous nous engageons à créer des produits en accord avec les standards de qualité les plus rigoureux.</p>
+            <p>A chaque étape de la production, nos lots sont contrôlés en laboratoire afin de garantir à nos consommateurs avertis des produits de la plus haute qualité.</p>
+        </div>
+    </div>
+    <p class="motto">
+        “ La passion des plantes qui soignent depuis 1978 ”
+    </p>
+    <div class="team">
+        <div class="wrapper">
+            <div class="header-equipe">
+                <img src="assets/images/images_quisommesnous/notre-equipe.gif" alt="L'équipe de l'Herboristerie du Pré" width="250 px" height="67px"/>
+            </div>
+            <div class="equipePartie2">
+                <div class="entry">
+                    <figure class="figure-equipe">
+                        <img src="assets/images/images_quisommesnous/mahmoud-equipe.jpg" class="figure-img img-fluid rounded" alt="Mahmoud naturopathe et gérant">
+                        <figcaption class="figure-caption">Mahmoud, naturopathe et responsable des ventes</figcaption>
+                    </figure>
+                </div>
+                <div class="entry">
+                    <figure class="figure-equipe">
+                        <img
+                        src="assets/images/images_quisommesnous/astrid-pierre-fondateur-equipe.jpg" class="figure-img img-fluid rounded" alt="Nos fondateurs">
+                        <figcaption class="figure-caption">Pierre et Astrid, nos herboristes fondateurs</figcaption>
+                    </figure>
+                </div>
+                <div class="entry">
+                    <figure class="figure-equipe">
+                        <img
+                        src="assets/images/images_quisommesnous/nora-equipe.jpg" class="figure-img img-fluid rounded" alt="Nora">
+                        <figcaption class="figure-caption">Nora, biologiste et responsable de production</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+

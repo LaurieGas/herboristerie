@@ -1,20 +1,134 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}L'Herboristerie de A à Z{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="assets/css/style.css">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="container-content">
+	<!-- CAROUSEL EN DISPLAY NONE POUR LA VERSION MOBILE   -->
+	<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></li>
+			<li data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></li>
+			<li data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner">
+			<div class="carousel-item active" data-bs-interval="10000">
+				<img src="assets/images/image_pageindex/carousel-image2.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>TISANES 100% NATURELLES</h5>
+					<p>Des tisanes à base de plantes simples qualité prémium</p>
+				</div>
+			</div>
+			{# MODIFIER DIMENSION IMAGE #}
+			<div class="carousel-item" data-bs-interval="2000">
+				<img src="assets/images/image_pageindex/rhodiola-rosea-antistress-du-nord.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					<h5>NOUVEAU !</h5>
+					<p>Découvrez la Rhodiola Rosea, l'antistress efficace venu du nord</p>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="assets/images/image_pageindex/carousel-image3.jpg" class="d-block w-100" alt="...">
+				<div class="carousel-caption d-none d-md-block">
+					{# <h5></h5>
+					<p></p> #}
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="visually-hidden">Next</span>
+		</a>
+	</div>
+	<!--  FIN CAROUSEL   -->
+	<!--  FIN  HEADER   -->
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+	<!--  MAIN   -->
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Laurie/Documents/GitHub/herboristerie/site-vitrine/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Laurie/Documents/GitHub/herboristerie/site-vitrine/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
+	<!--  ABECEDAIRE : ICI C'EST OK  -->
+	<section class="abecedaire-section"> <h1 class="abecedaire">L'ABÉCÉDAIRE</h1>
+		<form class="d-flex">
+			<input class="form-control me-2" type="search" placeholder="recherche" aria-label="Search">
+			<button class="btn btn-outline" type="submit">
+				<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-search" viewbox="0 0 16 16">
+					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+				</svg>
+			</button>
+		</form>
+	</section> 
+	<!--  FIN  ABECEDAIRE    -->
+
+
+	<!--  DE SAISON : RESPONSIVITE -->
+	<div class="d-flex bd-highlight">
+		<div class="p-2 flex-fill bd-highlight">
+		
+			<h2 class="saisonTitre">
+				C'EST DE SAISON</h2>
+			<br/>
+			<h3 class="saisonSousTitre">Une infusion romarin-citron contre les refroidissements</h3>
+			<hr>
+			<br/>
+
+			<!-- FAIRE UN PETIT TEXTE -->
+			<p class="saisonParagraphe">
+				Une délicieuse infusion detox avec seulement 2 ingrédients pour faire face en douceur à la saison froide ?Essayez ce mariage délicat et revigorant. Rhume, surmenage ? Le romarin fortifie l’organisme et stimule la circulation du sang. Le citron est un booster d'immunité et excellent anti-inflammatoire. Buvez cette tisane et profitez ainsi d'une excellente saveur et de nombreux avantages pour la santé !
+			</p>
+			<br>
+			<p class="saisonPara2">
+				Le romarin fait l’objet de très nombreuses mentions historiques et légendaires. Les anciens lui vouaient une grande vénération. On s'en servait généreusement dans toutes les fêtes, qu'il s'agisse de cérémonies nuptiales, funéraires ou de célébrations profanes. Les mariées portaient des couronnes de romarin, symboles d’amour et de fidélité, tandis que les invités recevaient des branches enjolivées de rubans de soie multicolores. On mettait aussi des brins de romarin sous les oreillers pour chasser les mauvais esprits et les cauchemars.
+			</p>
+            	<!--  AJOUTER LIEN VERS UNE PLANTE -->
+			<button href="" type="button" class="btn btn-primary mx-auto d-block">Découvrez la plante</button>
+			<br>
+		</div>
+		<div class="p-2 flex-fill bd-highlight">
+			<figure class="saisonImage">
+				<img src="assets/images/image_pageindex/infusion-thym-citron-romarin.jpg" class="img-fluid" alt="infusion-thym-citron-romarin">
+			</figure>
+		</div>
+	</div>
+	<!--  FIN  SAISON   -->
+
+
+	<!--  THEME FOCUS DU MOIS : REVOIR LA CONFIGURATION CAR LES PHOTOS "SAUTENT" -->
+	<div class="focusDuMoisPhoto">
+		<figure class="focusDuMoisPhoto1">
+			<img src="assets/images/image_pageindex/recolte1.jpg" alt="recoltePlante1">
+		</figure>
+		<figure class="focusDuMoisPhoto2">
+			<img src="assets/images/image_pageindex/recolte2.jpg" alt="recoltePlante2">
+		</figure>
+		<div class="focusDuMoisTexte">
+			<h1>La Récolte</h1>
+		    </br>
+		    <h4>Respectueuse de l'environnement</h4>
+		    <p>Toutes nos plantes médicinales de qualité herboristerie sont récoltées à la main dans le respect des ressources naturelles et des saisons.</p>
+		    <br>
+		    <p>Nous nous engageons chaque année à compenser 100% de nos émissions de gaz à effet de serre.</p>
+        </div>
+	</div>
+    <!--  FIN THEME FOCUS DU MOIS -->
+
+
+    <!--  ENGAGEMENTS DISPLAY NONE EN VERSION MOBILE -->
+    <div class="nosEngagements">
+        <figure>
+            <img src="assets/images/image_pageindex/Charte-engagement.jpg" class="img-fluid" alt="Charte-engagement">
+        </figure>
+    </div>
+    <!--  FIN ENGAGEMENTS  -->
+
+    <!--  FIN  MAIN  -->
+
 </div>
+<!--  FIN CONTAINER   -->
 {% endblock %}

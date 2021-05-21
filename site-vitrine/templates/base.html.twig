@@ -9,10 +9,11 @@
         <link rel="icon" href="assets/images/images_pageindex/favicon.ico" type="image/png sizes=" 16x16>
         {# <link rel="icon" href="assets/images/images_pageindex/favicon.ico"/> #}
         {# <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> #}
-        <title>{% block title %}L'Herboristerie du Pré{% endblock %}</title>
-
         {# CSS #}
-        {% block css %}<link rel="stylesheet" href="assets/css/style.css">{% endblock %}
+        <link rel="stylesheet" href="assets/css/style.css">
+        {% block css %}{% endblock %}
+        <title>{% block title %}L'Herboristerie du Pré{% endblock %}</title>
+       
 
         {% block stylesheets %}
         <!-- <link rel="stylesheet" media="screen and (min-width: 720px)" href="style.css"> -->
