@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion au site {% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="assets/css/compte/connexion.css">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+    {# espace insécable : 
+    div qui disparait au niveau mobile, il y aura juste un espace insécable #}
+        <div class="col-md-3">&nbsp;</div>
+        <div class="col-md-6">
+            <div class="bg-light py-3 px-3">
+                <h1>Connectez-vous !</h1>
+                <form action="{{ path('compte_connexion') }}" method="post">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        {# ici symfony s'attends à _username ! car c'est S qui va réceptionner les données du formulaire dc respecter le nom de champs #}
+                        <input type="text" name="_username" id="email" class="form-control" placeholder="Adresse email..." required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        {# ici symfony s'attends à _password ! #}
+                        <input type="password" name="_password" id="password" class="form-control" placeholder="Mot de passe..." required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+
+                    {# <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"> #}
+                    <button type="submit" class="btn">Connexion !</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

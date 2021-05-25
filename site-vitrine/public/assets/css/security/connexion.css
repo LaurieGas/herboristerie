@@ -1,0 +1,17 @@
+.bg-light.py-3.px-3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+/* 
+form {
+    font-family: 'Source Sans Pro', sans-serif;
+} */
+
+button.btn {
+    background-color: #809C80;
+    color: white;
+}
