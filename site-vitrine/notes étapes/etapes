@@ -30,8 +30,16 @@ On retrouvera notre dans dans le php myAdmin.
     => implementation de la userInterface (video 7.)
     => authentification avec le login form authentification : https://symfony.com/doc/4.4/security/form_login_setup.html (étapes)
         - authentification Symfony avec ligne de commande : php bin/console make:auth (crée un  controller, une vue, le login form authenticator*)
+        - * : ici, on va preciser la route de redirection dès que le user a reussi à se connecter !
+        - paramétrer les erreurs (si mauvais login/password)
 
-3. création du formulaire d'inscription d'un user (video 7.12 )
+3. création du formulaire d'inscription d'un user (video 7.12 ) 
+    => https://symfony.com/doc/4.4/doctrine/registration_form.html 
+        - définir entité Utilisateurs
+        - créer le formulaire avec le make:registration:form
+        - créer un controller pour gérer le formulaire
+        - securité : rendre accessible certaines parties de l'appli pour certains users
+
 4. Création controller administration : controller + vue ( video 14. )
      - creation AdminController video 14.1
      - Habillage différent pour l'admin video 14.2
