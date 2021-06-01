@@ -1,0 +1,106 @@
+/* PRESENTATION DES PLANTES */
+
+/* .section-plante {
+    padding : 90px;
+    margin-top: -30px;
+} */
+
+.titre-plante {
+    /* border : 1px solid #707070; */
+    height : 150px;
+    margin-top : 30px;
+    background-color: rgb(245, 244, 244);
+    color: #555;
+}
+
+.titre-plante>h1 {
+    text-align : center;
+    margin : 0auto;
+    margin-top : 40px; 
+    padding : 45px;
+    color: #555;
+    font-family: 'Lora', serif;
+}
+
+/* .bd-highlight>img {
+    border-radius:50%; */
+    /* border : 1px solid #707070; */
+    /* height : 300px;
+    width : 300px;
+    opacity: 1; 
+} */
+
+/* .bd-highlight>h2,button {
+    text-align : center;
+    margin-top : 15px;
+} */
+
+/* .bd-highlight>button {
+    color: white;
+    background-color:#809C80 ;
+    border: #809C80;
+} */
+
+/* .bd-highlight>h2 {
+    margin-top : 15px;
+    color: #555 !important;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size : 1.5em;
+} */
+
+@media (max-width: 667px) {
+    .d-flex.flex-nowrap.bd-highlight{
+    display: block !important;
+}
+
+}
+
+/* .order-2.p-4.bd-highlight {
+    margin: 0 auto;
+} */
+
+.sousTitre {
+    text-align: center;
+}
+
+.nouveaute p {
+    width: 60em;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    text-align: justify;
+}
+
+@media (max-width: 667px) {
+    .nouveaute p {
+        display: none;
+    }
+}
+
+.grillePlante {
+    display: grid;
+  /* 3 rangé et 4 colonnes */
+    grid-template: repeat(3, 400px) / repeat(3, 400px);
+    grid-gap: 30px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.grillePlante img {
+    border-radius:50%;
+    /* border : 1px solid #707070; */
+    height : 300px;
+    width : 300px;
+    opacity: 1; 
+    margin: 0 auto;
+}
+
+.grillePlante h2,button {
+    text-align : center;
+    margin-top : 15px;
+}
+
+.cartePlante {
+    margin: 0 auto;
+}

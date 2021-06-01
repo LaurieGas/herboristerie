@@ -1,20 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TisanesController!{% endblock %}
+{% block title %}Nos tisanes{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="assets/css/styleAbecedaire.css">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<!-- PRESENTATION DES TISANES-->
+<div class="container">
+    <div class="titre-plante">
+        <h1>BIENTOT VENTE EN LIGNE DE NOS TISANES</h1>
+    </div>
+    <br>
+    <br>
+    <h2 class="sousTitre">En attendant, venez déguster notre petite sélection dans notre salon !</h2>
+    <br>
+    <div class="nouveaute">
+        <p>Installé à Paris dans notre herboristerie, dans notre salon "Autour de la Tisane", nous vous proposons de venir déguster notre séléection de tisanes accompagné de délicieux petit sablés fait maison. Dans notre salon de dégustation, nous saurons vous conseiller et vous faire découvrir de nouvelles saveurs. Nous vous proposons régulièrement des événements littéraires et musicaux, de savouvreux moment qui vous permettrons de découvrir notre univers.</p>
+    <hr>
+    </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <section class="section-plante">
+            <div class="grillePlante">
+                {% for x in tisane %}
+                        <div class="cartePlante">
+                            <img src="assets/images/images_plantes_sechees/rose.jpg" alt="rose">
+                            <h2>{{ x.nomTisane }}</h2> 
+                            <a href="" class="btn btn-secondary btn-sm mx-auto d-block">Acheter</a>
+                        </div>
+                {% endfor %}
+            </div>
+    </section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Laurie/Documents/GitHub/herboristerie/site-vitrine/src/Controller/TisanesController.php'|file_link(0) }}">src/Controller/TisanesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Laurie/Documents/GitHub/herboristerie/site-vitrine/templates/tisanes/index.html.twig'|file_link(0) }}">templates/tisanes/index.html.twig</a></code></li>
-    </ul>
 </div>
 {% endblock %}
