@@ -30,6 +30,7 @@ class RegistrationController extends AbstractController
                 )
             );
 
+            // on attribue le rôle admin
             $user->setRoles(['ROLE_ADMIN']);
 
             $entityManager = $this->getDoctrine()->getManager();

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}En maintenance{% endblock %}
+
+
+{% block css %}
+	<link rel="stylesheet" href="assets/css/maintenance.css">
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="titre-plante">
+        <h1>BIENTOT VENTE EN LIGNE DE NOS TISANES</h1>
+    </div>
+    <br>
+    <br>
+    <h2 class="sousTitre">En attendant, venez déguster notre petite sélection dans notre salon !</h2>
+    <br>
+    <div class="nouveaute">
+        <p>Installé à Paris dans notre herboristerie, dans notre salon "Autour de la Tisane", nous vous proposons de venir déguster notre séléction de tisanes accompagné de délicieux petit sablés fait maison. Dans notre salon de dégustation, nous saurons vous conseiller et vous faire découvrir de nouvelles saveurs. Nous vous proposons régulièrement des événements littéraires et musicaux, de savouvreux moment qui vous permettrons de découvrir notre univers.</p>
+    <hr>
+    </div>
+    
+    <section class="section-plante">
+            <div class="grillePlante">
+                        <div class="cartePlante">
+                            {# <img src="assets/images/images_plantes_sechees/rose.jpg" alt="rose"> #}
+                            <img src="/assets/images/images_plantes_sechees/basilic.jpg" alt="basilic">
+                            <img src="/assets/images/images_plantes_sechees/marjolaine.jpg" alt="marjolaine">
+                            <img src="/assets/images/images_plantes_sechees/basilic.jpg" alt="basilic">
+                        </div>
+            </div>
+    </section>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'Votre espace d\'administration ' %}
+
+{% block page_content %}
+	<div class="container">a
+		<br>
+		<div class="row">
+			<div class="col">
+				<figure><img src="assets/images/image_pageindex/logo-herboristerie.png" alt="logo"></figure>
+			</div>
+			<div class="col">
+			{% for x in utilisateurs %}
+				<h2 style="text-align:center; font-style:italic; font-size:25px;">Bienvenue {{ x.nomUtilisateur ~ " " ~ x.prenomUtilisateur}} </h2>
+            {# {{dump()}} #}
+
+            {# si l'utilisateur a le ROLE_ADMIN #}
+                {# {% if is_granted('ROLE_ADMIN') %} #}
+                {# {{ dump(is_granted('ROLE_ADMIN')) }} #}
+                {# <span class="display-3">Bonjour {{ x.nomUtilisateur ~ " " ~ x.prenomUtilisateur}}</span> #}
+                {# {% endif %} #}
+            {% endfor %}
+				{# <h3>Nom :</h3>
+				<h3>Prénom :</h3>
+				<h3>Email :</h3> #}
+				<br>
+				<h4 style="text-align:center; font-size:20px;">Herboristerie du Pré</h4>
+				<address style="text-align:center">
+					77, Avenue Des Champs
+					<br>
+					75008 - Paris
+					<br>
+					01 44 54 04 88
+				</address>
+			</div>
+		</div>
+		<hr>
+		{# <p class="h2">NOMBRE TOTAL DES TISANES ET DES PLANTES : </p> #}
+		<br>
+		<div class="row">
+	{# NOMBRE TOTAL DES PLANTES #}
+	{# afficher de manière dynamique le nombre ttl de plantes #}
+		{% for x in plantes %}
+			<div class="col-6 alert-info">
+				<span class="display-3">{{ x.value }}</span>Plantes
+			</div>
+		{% endfor %}
+	{# NOMBRE TOTAL DES TISANES  #}
+	{# afficher de manière dynamique le nombre ttl de tisanes #}
+		{% for x in tisanes %}
+			<div class="col-6 alert-success">
+				{# display : afin de zoomer sur le contenu du span #}
+				<span class="display-3">{{ x.value }}</span>Tisanes
+			</div>
+		{% endfor %}
+		<br>
+		</div>
+	{# LISTE DE TOUTES LES TISANES ET DES PLANTES #}
+		<div class="row">
+			 {# LISTE PLANTES #}
+			<div class="col-6">
+			<br>
+				{# <p class="h2">LISTE DES PLANTES : </p> #}
+				<ul class="list-group">
+					{% for x in allPlantes %}
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						{{ x.nomPlante}}
+						<span><i class="fas fa-leaf"></i></span>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			{# LISTE TISANES #}
+			<div class="col-6">
+				{# <p class="h2">LISTE DES TISANES : </p> #}
+				<br>
+				<ul class="list-group">
+					{% for x in allTisanes %}
+					<li class="list-group-item d-flex justify-content-between align-items-center">
+						{{ x.nomTisane}}
+						<span><i class="fas fa-coffee"></i></span>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

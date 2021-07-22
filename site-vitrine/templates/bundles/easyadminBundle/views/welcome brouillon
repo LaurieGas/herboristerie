@@ -1,0 +1,176 @@
+ <div class="container">
+        <div class="row">
+        {# LISTE TTL TISANES ET PLANTES #}
+            <div class="col-6 alert-info">
+            {# afficher de manière dynamique le nombre ttl de plantes #}
+            {% for x in plantes %}
+                <span class="display-3">{{ x.value }}</span>Plantes
+            {% endfor %}
+            </div>
+            <div class="class col-6 alert-success">
+            {# afficher de manière dynamique le nombre ttl de tisanes #}
+            {% for x in tisanes %}
+                <span class="display-3">{{ x.value }}</span>Tisanes
+            {% endfor %}
+            </div>
+        </div>
+        <div class="row col-12">
+        {# LISTE PLANTES #}
+            <div class="col-6">
+                <p class="h3">Liste des plantes</p>
+                <ul class="list-group">
+                {# afficher le nom de chaque plante créée #}
+                {% for x in allPlantes %} 
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{x.nomPlante}}
+                        <span class="badge badge-pill"><i class=""></span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {# LISTE TISANES #}
+            <div class="col-6">
+                <p class="h3">Liste des tisanes</p>
+                <ul class="list-group">
+                {# afficher le nom de chaque tisane créée #}
+                {% for x in allTisanes %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{x.nomTisane}}
+                        <span class="badge badge-pill"><i class=""></span>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {# INFOS HERBORISTERIE #}
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <h1>L'Herboristerie Du Pré</h1>
+            </div>
+        </div>
+        {# <div class="row">
+            <div class="col-6 test"><img src="assets/images/images_pagecontact/herboristerie-paris.png" style="width: 100%"></div>
+        </div> #}
+        <div class="row">
+            <div class="col-4">
+                <div id="store83" class="store-detail-box valign-middle-table" data-idstore="83">
+                    <div class="address-infos">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-6 col-xs-12">
+                                <span class="name">Herboristerie Du Pré</span>
+                                <address>
+                                    77, Avenue Des Champs
+                                    <br>
+                                    75008 - Paris
+                                    <br>
+                                    01 44 54 04 88
+                                </address>
+                            </div>
+                            <div class="col-lg-5 col-md-6 col-xs-12">
+                                <div class="btn-choose-ctn text-center"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="schedule" class="schedule">
+                        <strong class="title">Horaires d'ouverture</strong>
+                        <div class="clearfix">
+                            <ul class="tab-hours md6 xxs12">
+                                <li class="row" itemprop="openingHours" content="9h00 / 17h45">
+                                    <div class="col-lg-4 col-xs-6">
+                                        <strong>Lundi</strong>
+                                    </div>
+                                    <div class="col-lg-8 col-xs-6">9h00 / 17h45</div>
+                                </li>
+                                <li class="row" itemprop="openingHours" content="9h00 / 17h45">
+                                    <div class="col-lg-4 col-xs-6">
+                                        <strong>Mardi</strong>
+                                    </div>
+                                    <div class="col-lg-8 col-xs-6">9h00 / 17h45</div>
+                                </li>
+                                <li class="row" itemprop="openingHours" content="9h00 / 17h45">
+                                    <div class="col-lg-4 col-xs-6">
+                                        <strong>Mercredi</strong>
+                                    </div>
+                                    <div class="col-lg-8 col-xs-6">9h00 / 17h45</div>
+                                </li>
+                                <li class="row" itemprop="openingHours" content="9h00 / 17h45">
+                                    <div class="col-lg-4 col-xs-6">
+                                        <strong>Jeudi</strong>
+                                    </div>
+                                    <div class="col-lg-8 col-xs-6">9h00 / 17h45</div>
+                                </li>
+                            </ul>
+                            <ul class="tab-hours md6 xxs12">
+                                <li class="row" itemprop="openingHours" content="9h00 / 17h45">
+                                    <div class="col-lg-4 col-xs-6">
+                                        <strong>Vendredi</strong>
+                                    </div>
+                                    <div class="col-lg-8 col-xs-6">9h00 / 17h45</div>
+                                </li>
+                                <li class="row" itemprop="openingHours" content="9h00 / 17h45">
+                                    <div class="col-lg-4 col-xs-6">
+                                        <strong>Samedi</strong>
+                                    </div>
+                                    <div class="col-lg-8 col-xs-6">9h00 / 17h45</div>
+                                </li>
+                                <li class="row" itemprop="openingHours" content="9h00 / 17h45">
+                                    <div class="col-lg-4 col-xs-6">
+                                        <strong>Dimanche</strong>
+                                    </div>
+                                    <div class="col-lg-8 col-xs-6">9h00 / 17h45</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {# <div class="row">
+            <figure>
+                <img src="assets/images/images_pagecontact/paris.png" style="width: 90%">
+            </figure>
+        </div> #}
+    </div>
+
+    {# INFOS ADMIN #}
+            <div class="col-6 alert-info">
+            {# afficher de manière dynamique les infos des utilisateurs #}
+            {% for x in utilisateurs %}
+            {# {{dump()}} #}
+
+            {# si l'utilisateur a le ROLE_ADMIN #}
+                {# {% if is_granted('ROLE_ADMIN') %} #}
+                {# {{ dump(is_granted('ROLE_ADMIN')) }} #}
+                <span class="display-3">Bonjour {{ x.nomUtilisateur ~ " " ~ x.prenomUtilisateur}}</span>
+                {# {% endif %} #}
+            {% endfor %}
+
+    	<div class="container"> {% include('includes/navbar.html.twig')%}
+		<h1>Bienvenue dans la page d'administration :</h1>
+		<br>
+		<div class="row">
+			<div class="col">
+				<figure><img src="assets/images/image_pageindex/logo-herboristerie.png" alt="logo"></figure>
+			</div>
+			<div class="col">
+				<h2>INFORMATIONS :</h2>
+				<h3>Nom :</h3>
+				<h3>Prénom :</h3>
+				<h3>Email :</h3>
+
+				<h4>Adresse de l'entreprise :</h4>
+				<address>
+					77, Avenue Des Champs
+					<br>
+					75008 - Paris
+					<br>
+					01 44 54 04 88
+				</address>
+			</div>
+		</div>
+
+{% endblock %}
+

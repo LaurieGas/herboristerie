@@ -14,7 +14,7 @@ class CompteController extends AbstractController
      */
     public function connexion(): Response
     {
-        // attraper l'erreur si il y en a une
+        // récupérer l'erreur si il y en a une
         // $error = $authenticationUtils->getLastAuthenticationError();
 
         // dernier mail entré par l'utilisateur

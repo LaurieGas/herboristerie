@@ -19,6 +19,19 @@ class TisaneRepository extends ServiceEntityRepository
         parent::__construct($registry, Tisane::class);
     }
 
+    // requête pour afficher le nombre de tisanes
+    /**
+    * @return Tisane[] Returns an array of Tisane objects
+    */
+    public function countAllTisanes()
+    {
+        $queryBuilder =  $this->createQueryBuilder('a');
+        $queryBuilder->select('COUNT(a.id) as value');
+
+        return $queryBuilder->getQuery()->getResult();
+
+    }
+
     // /**
     //  * @return Tisane[] Returns an array of Tisane objects
     //  */
@@ -47,4 +60,17 @@ class TisaneRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    // /**
+    //  * @return int|mixed|string|null
+    //  * @throws \Doctrine\ORM\NonUniqueResultException
+    //  */
+    // public function countAllTisanes()
+    // {
+    //     $queryBuilder = $this->createQueryBuilder('a');
+    //     $queryBuilder->select('COUNT(a.id) as value');
+
+    //     return $queryBuilder->getQuery()->getOneOrNullResult();
+    // }
+
 }

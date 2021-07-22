@@ -4,6 +4,9 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    app.path.tisanes_images: /uploads/images/tisanes
+    app.path.plantes_images: /uploads/images/plantes
+    # Ces «mappages» indiquent au bundle où les fichiers doivent être téléchargés et quels chemins doivent être utilisés pour les afficher dans l'application.
 
 services:
     # default configuration for services in *this* file

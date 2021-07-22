@@ -96,7 +96,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
         }
 
         // si l'authentification est OK => redirection à l'espace admin
-        return new RedirectResponse($this->urlGenerator->generate('home'));
+        return new RedirectResponse($this->urlGenerator->generate('admin'));
         throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

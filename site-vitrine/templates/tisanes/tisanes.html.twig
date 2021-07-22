@@ -17,7 +17,7 @@
     <h2 class="sousTitre">En attendant, venez déguster notre petite sélection dans notre salon !</h2>
     <br>
     <div class="nouveaute">
-        <p>Installé à Paris dans notre herboristerie, dans notre salon "Autour de la Tisane", nous vous proposons de venir déguster notre séléection de tisanes accompagné de délicieux petit sablés fait maison. Dans notre salon de dégustation, nous saurons vous conseiller et vous faire découvrir de nouvelles saveurs. Nous vous proposons régulièrement des événements littéraires et musicaux, de savouvreux moment qui vous permettrons de découvrir notre univers.</p>
+        <p>Installé à Paris dans notre herboristerie, dans notre salon "Autour de la Tisane", nous vous proposons de venir déguster notre séléction de tisanes accompagné de délicieux petit sablés fait maison. Dans notre salon de dégustation, nous saurons vous conseiller et vous faire découvrir de nouvelles saveurs. Nous vous proposons régulièrement des événements littéraires et musicaux, de savouvreux moment qui vous permettrons de découvrir notre univers.</p>
     <hr>
     </div>
 
@@ -25,9 +25,10 @@
             <div class="grillePlante">
                 {% for x in tisane %}
                         <div class="cartePlante">
-                            <img src="assets/images/images_plantes_sechees/rose.jpg" alt="rose">
+                            {# <img src="assets/images/images_plantes_sechees/rose.jpg" alt="rose"> #}
+                             <img src="/uploads/images/tisanes/{{ x.imageTisane }}">
                             <h2>{{ x.nomTisane }}</h2> 
-                            <a href="" class="btn btn-secondary btn-sm mx-auto d-block">Acheter</a>
+                            <a href="{{ path("maintenance")}}" class="btn btn-secondary btn-sm mx-auto d-block">Acheter</a>
                         </div>
                 {% endfor %}
             </div>

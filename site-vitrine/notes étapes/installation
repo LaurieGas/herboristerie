@@ -1,9 +1,0 @@
-Installation de l'environnement de dev
-
-php
-symfony
-php my admin
-visual studio code + extension dont : 
-emmet (conflit avec twig donc file/preference/setting/extensions/setting json/edit json :   "emmet.includeLanguages": {"twig": "html"},), 
-php docBlocker 
-php namespace Resolver

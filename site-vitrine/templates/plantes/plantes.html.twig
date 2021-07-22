@@ -1,20 +1,63 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.html.twig'%}
 
-{% block title %}Hello PlantesController!{% endblock %}
+{% block title %}Nos plantes{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="assets/css/styleAbecedaire.css">
+{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/Laurie/Documents/GitHub/herboristerie/site-vitrine/src/Controller/PlantesController.php'|file_link(0) }}">src/Controller/PlantesController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/Laurie/Documents/GitHub/herboristerie/site-vitrine/templates/plantes/index.html.twig'|file_link(0) }}">templates/plantes/index.html.twig</a></code></li>
-    </ul>
+<!-- PRESENTATION DES PLANTES -->
+<div class="titre-plante">
+    <h1>NOS PLANTES</h1>
 </div>
+<br>
+<section
+    class="section-plante">
+    {# <div class="card-deck  justify-content-center"> #}
+    <div class="row flex-lg-row flex-xl-row flex-column">
+        {% for x in plante %}
+            <div class="col-xl-4 col-lg-4 col-md-8 col-sm-12 m-auto text-center">
+                <div class="card bg-light my-5 shadow ">
+                    <h3 class="card-header">{{x.nomPlante}}</h3>
+                    <img height="350px" class="rounded-circle border m-2" src="uploads/images/plantes/{{x.imagePlante}}" alt="Card image">
+                    <div class="card-body">
+                        <p>{{x.famille}}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="{{ path('fiches', {id: x.id}) }}" class="btn btn-secondary btn-sm mx-auto d-block">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+<!-- FIN PRESENTATION DES PLANTES -->
+
+
+{# <!-- PRESENTATION DES TISANES-->
+<div class="container">
+    <div class="titre-plante">
+        <h1>NOS PLANTES</h1>
+    </div>
+    <br>
+    <br>
+    <hr>
+    </div>
+
+    <section class="section-plante">
+            <div class="grillePlante">
+                {% for x in plante %}
+                        <div class="cartePlante"> #}
+                            {# <img src="assets/images/images_plantes_sechees/rose.jpg" alt="rose"> #}
+                             {# <img src="/uploads/images/plantes/{{ x.imagePlante }}">
+                            <h2>{{ x.nomPlante }}</h2>  #}
+                            {# <h2>{{ x.id }}</h2> #}
+                            {# <a href="{{ path('fiches', {id: x.id}) }}" class="btn btn-secondary btn-sm mx-auto d-block">En savoir plus</a>
+                        </div>
+                {% endfor %}
+            </div>
+    </section>
+
+</div> #}
 {% endblock %}

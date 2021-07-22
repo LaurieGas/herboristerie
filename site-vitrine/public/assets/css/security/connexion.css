@@ -15,3 +15,22 @@ button.btn {
     background-color: #809C80;
     color: white;
 }
+
+.bg-light.py-3.px-3>form>#error {
+    color: red;
+    font-size: 11px;
+}
+
+.bg-light.py-3.px-3>form>#error>a {
+    color:#555 !important;
+    border:0.5px solid #555;
+}
+
+.bg-light.py-3.px-3 {
+    position: relative;
+}
+
+form>#error {
+    position:absolute;
+    top: -25px;
+}

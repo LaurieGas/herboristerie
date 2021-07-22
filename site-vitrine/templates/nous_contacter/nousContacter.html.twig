@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %}
 
 {% block title %}NousContacter{% endblock %}
 
@@ -19,11 +19,9 @@
 			<h3>Contactez-nous ou passez prendre une tisane dans notre salon</h3>
 		</div>
 	</div>
-	{# <main> #}
 	<div class="row">
 		<div class="col-6"><img src="assets/images/images_pagecontact/herboristerie-paris.png"></div>
 	</div>
-{# </div> #}
 
     <div class="row">
         <div class="col-4">
@@ -105,4 +103,70 @@
         </figure>
     </div>
 </div>
+{% endblock %} #}
+
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous Contacter
 {% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="assets/css/nousContacter.css">
+{% endblock %}
+
+{% block body %}
+
+	<div class="container pageContact">
+		<h1>L'Herboristerie Du Pré</h1>
+		<h2>UNE QUESTION ? UN COMMENTAIRE ? UNE SUGGESTION ?</h2>
+        
+		<h3>Contactez-nous ou passez prendre une tisane dans notre salon</h3>
+        <br>
+
+		<div class="row">
+			<div class="col">
+				<figure class="image1">
+					<img src="assets/images/images_pagecontact/herboristerie-paris.png"></figure>
+			</div>
+			<div class="col adress">
+				<h4 class="pageContact">Retrouvez-nous ici pour une tasse de tisane !
+				</h4>
+				<address>
+					77, Avenue Des Champs
+					<br>
+					75008 - Paris
+					<br>
+					01 44 54 04 88
+				</address>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col">
+				<div class="horaires">
+					<h4 class="pageContact" alt="horaires">Nos Horaires</h4>
+                    
+					<div class="col">
+						<ul>
+							<li><strong>Lundi</strong> - 9h00 / 17h45</li>
+							<li><strong>Mardi</strong> - 9h00 / 17h45</li>
+							<li><strong>Mercredi</strong> - 9h00 / 17h45</li>
+							<li><strong>Jeudi</strong> - 9h00 / 17h45</li>
+							<li><strong>Vendredi</strong> - 9h00 / 17h45</li>
+							<li><strong>Samedi</strong> - 9h00 / 17h45</li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<div class="col">
+				<figure class="image1">
+					<img src="assets/images/images_pagecontact/paris.png"></figure>
+			</div>
+		</div>
+
+	</div>
+
+{% endblock %} 

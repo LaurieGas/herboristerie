@@ -19,9 +19,19 @@ class PlanteRepository extends ServiceEntityRepository
         parent::__construct($registry, Plante::class);
     }
 
-    // /**
-    //  * @return Plante[] Returns an array of Plante objects
-    //  */
+    // requête pour afficher le nombre de plantes
+    /**
+     * @return Plante[] Returns an array of Plante objects
+     */
+    public function countAllPlantes()
+    {
+        $queryBuilder =  $this->createQueryBuilder('a');
+        $queryBuilder->select('COUNT(a.id) as value');
+
+        return $queryBuilder->getQuery()->getResult();
+
+    }
+
     /*
     public function findByExampleField($value)
     {
@@ -47,4 +57,17 @@ class PlanteRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    // /**
+    //  * @return int|mixed|string|null
+    //  * @throws \Doctrine\ORM\NonUniqueResultException
+    //  */
+    // public function countAllPlantes()
+    // {
+    //     $queryBuilder = $this->createQueryBuilder('a');
+    //     $queryBuilder->select('COUNT(a.id) as value');
+
+    //     return $queryBuilder->getQuery()->getOneOrNullResult();
+    // }
+
 }

@@ -1,4 +1,4 @@
-h1 {
+ /* h1 {
     color: #809C80;
     text-align: center;
     font-family: 'Lora', serif;
@@ -68,7 +68,7 @@ div.container.svg {
 }
 
 /* PARTIE LIVRAISON */
-div.pageIntro__wrapper__topTitle {
+/* div.pageIntro__wrapper__topTitle {
     padding-top: 30px;
 }
 
@@ -164,4 +164,83 @@ div.col-sm img {
 div.row.icone {
     text-align: center;
     margin-top: 40px;
+}  */
+
+ 
+
+/* ---------------------------------- */
+
+ /* CSS */
+
+
+.container.pageContact {
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
+
+
+h1{
+    color: #809C80;
+    text-align: center;
+    font-family: 'Lora', serif;
+    margin-top: 15px;
+}
+
+h2{
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+h3{
+    text-align: center;
+    color: #809C80;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+.pageContact {
+    color: #555;
+    font-family: 'Lora', serif;
+    font-size: 1em;
+    
+}
+
+.image1 img{
+    width:100%;
+}
+
+
+.col.adress{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'Lora', serif;
+    color: rgb(97, 89, 89);
+}
+
+ul {
+    list-style-type: none;
+    }
+
+   
+.horaires{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.3em;
+    font-family: 'Lora', serif;
+    color: rgb(97, 89, 89);
+}
+
+.horaires h4{
+    text-align: center; 
+}
+
+/* RESPONSIVE MEDIA QUERY */
+
+@media (max-width:720px) {
+    img {
+        display :none;
+    }
+} 
+

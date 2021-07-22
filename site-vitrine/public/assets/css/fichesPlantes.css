@@ -1,0 +1,75 @@
+
+.monograph-body {
+    background-color: rgb(245, 244, 244);
+}
+.monograph-plant-title {
+    font-family: 'Lora', serif;
+    font-size: 60px;
+    text-align: center;
+    color: #555555;
+    text-transform: uppercase;
+    text-shadow: -1px -2px #cccccc;
+}
+
+#id.monograph-plant-title {
+    display:none;
+}
+
+.h2-monograph {
+    color: #809C80;
+    text-align: center;
+}
+.plante-nom-latin {
+    text-align: center;
+}
+.sous-titre-mono {
+    color: #000000;
+}
+#container-monograph {
+    display: grid;
+    padding: 2%;
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.monograph-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -moz-box-shadow: 0 0 10px #777777;
+    -webkit-box-shadow: 0 0 10px #777777;
+    box-shadow: 0 0 10px #777777;
+    border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+    -moz-border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+    -webkit-border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+}
+img {
+    /* width: 100%; */
+    /* height: 100%; */
+    object-fit: cover;
+}
+hr {
+    width: 90%;
+    height: 1px;
+    border: solid 1px #cccccc;
+}
+.text-monograph {
+    -moz-box-shadow: 0 0 10px #777777;
+    -webkit-box-shadow: 0 0 10px #777777;
+    box-shadow: 0 0 10px #777777;
+    padding: 30px;
+    background-color: #ffffff;
+    text-align: justify;
+    color: #555555;
+}
+
+.retourBtn{
+    background-color: #809C80;
+    color: white;
+    width: 15%;
+    margin-bottom: 10px;
+}
+
+.btn.btn-secondary.btn-sm.mx-auto.d-block{
+    width: 15%;
+    margin-bottom: 10px;
+}

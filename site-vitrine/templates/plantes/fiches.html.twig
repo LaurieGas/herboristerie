@@ -1,0 +1,56 @@
+{% extends 'base.html.twig'%}
+
+{% block title %}Fiches plantes{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/assets/css/fichesPlantes.css">
+{% endblock %}
+
+{% block body %}
+<section class="monograph-body">
+        <div id="container-monograph">
+            
+            {# {% for fiche in fichePlante %} #}
+            <div class="text-monograph">
+              <h1 id= "id" class="monograph-plant-title">{{fichePlante.id}}</h1>
+                <h1 class="monograph-plant-title">{{fichePlante.nomPlante|upper}}</h1>
+                <p class="plante-nom-latin"><em>{{fichePlante.nomLatin|upper}}</em></p>
+                <h2 class="h2-monograph">CARTE D'IDENTITE</h2>
+                <p>
+                <h3 class="sous-titre-mono">Nom Commun</h3>
+                {{fichePlante.nomCommun}}
+                </p>
+                <p>
+                <h3 class="sous-titre-mono">Famille</h3>
+                {{fichePlante.famille}}
+                </p>
+                <p>
+                <h3 class="sous-titre-mono">Origine géographique</h3>
+                {{fichePlante.origineGeograpHique}}
+                </p>
+                <p>
+                <h3 class="sous-titre-mono">Description botanique</h3>
+                {{fichePlante.descriptionBotanique}}
+                </p>
+                <hr>
+                <h2 class="h2-monograph">UTILISATION</h2>
+                <p>
+                <h3 class="sous-titre-mono">Parties Utilisées</h3>{{fichePlante.partiesUtilisees}}</p>
+                <p>
+                <h3 class="sous-titre-mono">Propriétés</h3>{{fichePlante.proprietes}}
+                </p>
+                <figure><img src="/assets/images/images_quisommesnous/plants-border.jpg"></figure>
+            </div>
+            {# {% endfor %} #}
+            {# <div class="retourBtn">
+                <a class="btn btn-lg" href="{{ path('plantes') }}">Retour</a>
+            </div> #}
+            <div>
+                <figure class=monograph-plant>
+                    <img class="monograph-img" src="{{ asset('/uploads/images/plantes/' ~ fichePlante.imagePlante) }}"  alt="">  
+                </figure>
+            </div>
+        </div>
+        <a href="{{ path("plantes") }}" class="btn btn-secondary btn-sm mx-auto d-block">retour</a>
+    </section>
+{% endblock %}

@@ -18,8 +18,17 @@ class TisanesController extends AbstractController
         return $this->render('tisanes/tisanes.html.twig', [
             'tisane' => $tisanes
         ]);
-        // return $this->render('tisanes/tisanes.html.twig', [
-        //     'controller_name' => 'TisanesController',
-        // ]);
+       
+    }
+
+    
+    /**
+     * @Route("/maintenance", name="maintenance")
+    */
+    public function show(): Response
+    {
+        return $this->render('maintenance/maintenance.html.twig', [
+            'controller_name' => 'En cours de création !',
+        ]);
     }
 }

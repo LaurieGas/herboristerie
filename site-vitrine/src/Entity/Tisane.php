@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\TisaneRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\TisaneRepository;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
  * @ORM\Entity(repositoryClass=TisaneRepository::class)
@@ -34,6 +36,18 @@ class Tisane
      */
     private $image_tisane;
 
+    // /**
+    //  * @var File|null
+    //  */
+    // private $imageTisaneFile;
+
+    // /**
+    //  * @ORM\Column(type="datetime", nullable=true)
+    //  * @var \DateTime
+    //  */
+    // private $updated_at;
+    
+
     /**
      * @ORM\Column(type="text")
      */
@@ -52,6 +66,7 @@ class Tisane
     public function __construct()
     {
         $this->plantes = new ArrayCollection();
+        // $this->updatedAt = new \DateTime('now');
     }
 
     public function getId(): ?int
@@ -83,17 +98,80 @@ class Tisane
         return $this;
     }
 
+    // /**
+    // * @param File|null $image_tisane
+    // */
+    // public function setImageTisaneFile(?File $image_tisane = null):void
+    // {
+    //     $this->imageTisaneFile = $image_tisane;
+    //     // dd($imageTisaneFile);
+    //     if (null ==! $image_tisane) {
+    //      $this->updatedAt = new \DateTime('now');
+    //     //  dd($this);
+    //     }
+    // }
+  
+    // ici par défaut, on initialise la variable $image_tisane à null
+    // $image_tisane est de type file et est null
+    // public function setImageTisaneFile(File $image_tisane = null)
+    // {
+        // $this->imageTisaneFile = $imageTisaneFile;
+        // $this->imageTisaneFile = $image_tisane;
+        // if ( $this->imageTisaneFile instanceof UploadedFile ) {
+        //     // si imageTisaneFile est de type uploadedFile alors maj le updated_at
+        //     $this->updated_at = new \DateTime('now');
+        // }
+        //    if($image_tisane) {
+            // if 'updatedAt' is not defined in your entity, use another property
+        //     $this->updatedAt = new \DateTime('now');
+        // }
+
+        // return $this;
+        // $this->imageTisaneFile = $image_tisane;
+
+        // // VERY IMPORTANT:
+        // // It is required that at least one field changes if you are using Doctrine,
+        // // otherwise the event listeners won't be called and the file is lost
+        // // VichUploader impose une mise à jour d'un champs de notre entité dès que l'image est mise à jour
+        // if (null !== $image_tisane) {
+        //     // if 'updatedAt' is not defined in your entity, use another property
+        //     $this->updatedAt = new \DateTime('now');
+        // }
+    // }
+
+    
+    // /**
+    // * @return File|null
+    // */
+    // public function getImageTisaneFile(): ?File
+    // // ?File = typage de la propriété, ici on retourne un type File
+    // {
+    //     return $this->imageTisaneFile;
+    // }
+
+
     public function getImageTisane(): ?string
     {
         return $this->image_tisane;
     }
 
-    public function setImageTisane(string $image_tisane): self
+    public function setImageTisane( ?string $image_tisane): self
     {
         $this->image_tisane = $image_tisane;
 
         return $this;
     }
+    
+    // public function getUpdatedAt(): ?\DateTimeInterface {
+    //     return $this->updated_at;
+    // }
+
+    // public function setUpdatedAt( \DateTimeInterface $updated_at ): self {
+    //     $this->updated_at = $updated_at;
+
+    //     return $this;
+    // }
+    
 
     public function getConseilUtilisation(): ?string
     {
@@ -146,3 +224,7 @@ class Tisane
         return $this;
     }
 }
+
+
+// Notes : 
+// updated_at = permet à Doctrine de savoir qd un fichier a été mis à jour. VichUploader impose une mise à jour d'un champs de notre entité dès que l'image est mise à jour

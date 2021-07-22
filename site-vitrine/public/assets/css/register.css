@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    margin-top: 15px;
+}
+
+button.btn {
+    background-color: #809C80;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 50%;
+}
+
+label {
+    margin-top : 5px;
+    margin-bottom: 5px;
+}
+
+/* agree terms */
+.form-check {
+    /* display: none; */
+}
