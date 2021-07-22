@@ -39,7 +39,7 @@ class UtilisateursCrudController extends AbstractCrudController
     }
 
     // permission pour supprimer des éléments plantes/tisanes
-    //affichage de la page détail du user
+    // affichage de la page détail du user
     public function configureActions(Actions $actions): Actions
     {
         $detailUtilisateur = Action::new('detailUser', 'Détail', 'fa fa-user')

@@ -102,10 +102,6 @@ class TisaneCrudController extends AbstractCrudController
             // TextField::new('compositionDetail'),
            
 
-
-
-
-
             // test1
             // ImageField::new('imageTisaneFile')->setBasePath($this->getParameter('app.path.tisanes_images'))->setUploadDir('public\uploads\images\tisanes'),
             // ImageField::new('imageTisaneFile')
